@@ -1,0 +1,22 @@
+{
+  "name": "jmyates_portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmyates2014/jmyates_portfolio.git"
+  },
+  "author": "Jay Yates",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jmyates2014/jmyates_portfolio/issues"
+  },
+  "homepage": "https://github.com/jmyates2014/jmyates_portfolio#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
