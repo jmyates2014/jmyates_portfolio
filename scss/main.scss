@@ -45,10 +45,13 @@ header {
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px);
+  max-width: 1600px;
+  margin: 0 auto;
   .icons {
     margin-top: 1rem;
     a {
       padding: 0.4rem;
+      color: set-text-color($primary-color);
       &:hover {
         color: $secondary-color;
         @include easeOut();
