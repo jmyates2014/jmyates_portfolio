@@ -1,5 +1,8 @@
 // huge screens
 @include mediaXl {
+  main {
+    font-size: 1.25em;
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -64,6 +67,29 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .resume {
+    display: inline-block;
+    ul {
+      padding-left: 0px;
+    }
+    li {
+      margin: 0 0 2rem 0;
+      list-style-type: none;
+    }
+    .left,
+    .right {
+      width: 100%;
+      display: inline-block;
+    }
+    .skills ul {
+      padding-left: 0px;
+    }
+    .skills li {
+      list-style-type: none;
+      margin: 0 0 0.5rem 0;
+    }
+  }
 }
 
 // Smartphone
@@ -81,5 +107,13 @@
   }
   .projects {
     grid-template-columns: 1fr;
+  }
+  &#home .title {
+    display: inline-block;
+    color: set-text-color($primary-color);
+    margin-right: 1rem;
+    i {
+      visibility: hidden;
+    }
   }
 }

@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&family=Lato:wght@300;400&display=swap');
 
 * {
   box-sizing: border-box;
@@ -11,14 +12,17 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
   line-height: 1.5;
+  font-size: 1.25em;
 }
 
 // Headings
 h1,
 h2,
 h3 {
+  font-family: 'Encode Sans', sans-serif;
   margin: 0;
   font-weight: 400;
   &.lg-heading {
@@ -29,6 +33,11 @@ h3 {
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
+}
+h6 {
+  margin: 0.5rem 0;
+  font-weight: 400;
+  font-style: italic;
 }
 a {
   color: #fff;
@@ -64,6 +73,15 @@ main {
       margin-top: 20vh;
     }
   }
+  &#home .title {
+    display: inline-block;
+    color: set-text-color($primary-color);
+    margin-right: 1rem;
+  }
+  &#home .title i {
+    color: #999;
+    color: rgba(set-text-color($primary-color), 0.25);
+  }
 }
 
 .about-info {
@@ -97,13 +115,34 @@ main {
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
   }
+  .job li {
+    list-style-type: none;
+    margin: 0 0 1rem 0;
+  }
+
+  .job ul {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 // Projects Grid
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 2.5rem;
   grid-template-columns: repeat(3, 1fr);
+  p,
+  h3 {
+    color: set-text-color($primary-color);
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 
   img {
     width: 100%;
@@ -140,6 +179,57 @@ main {
       }
     }
   }
+}
+
+//Resume Section
+.resume {
+  display: flex;
+  gap: 2rem;
+
+  .left {
+    width: 30vw;
+    padding: 1rem;
+  }
+  .right {
+    width: 70vw;
+    padding: 1rem;
+  }
+  .left h5,
+  .left h6 {
+    margin: 0;
+  }
+  a {
+    color: $secondary-color;
+    font-weight: 800;
+    &:hover {
+      opacity: 0.5;
+      @include easeOut;
+    }
+  }
+}
+
+.tech {
+  text-align: center;
+}
+
+.tech ul {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  align-content: center;
+}
+
+.tech ul li {
+  margin: 0 0 0.25rem 0;
+  background-color: $secondary-color;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  padding: 0.25rem 1em;
+  list-style: none;
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+  color: set-text-color($secondary-color);
 }
 
 //btn styles
